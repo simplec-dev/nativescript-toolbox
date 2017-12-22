@@ -1,6 +1,8 @@
 import FileSystem = require("file-system");
 import HTTP = require("http");
 import Image = require("image-source");
+import FetchModule = require("fetch");
+
 /**
  * A basic logger.
  */
@@ -52,7 +54,7 @@ export declare class AggregateAuthorizer implements IAuthorizer {
      */
     addAuthorizers(...authorizers: IAuthorizer[]): void;
     /** @inheritdoc */
-    prepare(reqOpts: HTTP.HttpRequestOptions): void;
+    prepare(reqOpts: FetchModule.HttpRequestOptions): void;
 }
 /**
  * List of API client result contextes.
@@ -100,7 +102,7 @@ export declare class BasicAuth implements IAuthorizer {
      */
     password: string;
     /** @inheritdoc */
-    prepare(reqOpts: HTTP.HttpRequestOptions): void;
+    prepare(reqOpts: FetchModule.HttpRequestOptions): void;
     /**
      * Gets the username.
      *
@@ -120,7 +122,7 @@ export declare class BearerAuth implements IAuthorizer {
      */
     constructor(token: string);
     /** @inheritdoc */
-    prepare(reqOpts: HTTP.HttpRequestOptions): void;
+    prepare(reqOpts: FetchModule.HttpRequestOptions): void;
     /**
      * Gets the token.
      *
@@ -286,7 +288,7 @@ export interface IApiClient {
      *
      * @param {Function} beforeAction The action to invoke.
      */
-    beforeSend(beforeAction: (opts: HTTP.HttpRequestOptions, tag: any) => void): IApiClient;
+    beforeSend(beforeAction: (opts: FetchModule.HttpRequestOptions, tag: any) => void): IApiClient;
     /**
      * Defines an action that is invoked on a status code between 400 and 499.
      *
@@ -682,7 +684,7 @@ export interface IApiClientConfig {
      *
      * @property
      */
-    beforeSend?: (opts: HTTP.HttpRequestOptions) => void;
+    beforeSend?: (opts: FetchModule.HttpRequestOptions) => void;
     /**
      * Defines the action to handle a status code between 400 and 499.
      *
@@ -850,7 +852,8 @@ export interface IApiClientResult extends ILogger, ITagProvider {
      *
      * @property
      */
-    headers: HTTP.Headers;
+    headers: FetchModule.Headers;
+    
     /**
      * Returns the content as wrapped AJAX result object.
      *
@@ -894,7 +897,7 @@ export interface IApiClientResult extends ILogger, ITagProvider {
      *
      * @property
      */
-    response: HTTP.HttpResponse;
+    response: FetchModule.HttpResponse;
 }
 /**
  * Describes an object that prepares a HTTP for authorization.
@@ -903,9 +906,9 @@ export interface IAuthorizer {
     /**
      * Prepares a HTTP request for authorization.
      *
-     * @param {HTTP.HttpRequestOptions} reqOpts The request options.
+     * @param {FetchModule.HttpRequestOptions} reqOpts The request options.
      */
-    prepare(reqOpts: HTTP.HttpRequestOptions): any;
+    prepare(reqOpts: FetchModule.HttpRequestOptions): any;
 }
 /**
  * Describes a format provider context.
@@ -1257,7 +1260,7 @@ export declare enum LogSource {
 export declare class OAuth implements IAuthorizer {
     private _fields;
     /** @inheritdoc */
-    prepare(reqOpts: HTTP.HttpRequestOptions): void;
+    prepare(reqOpts: FetchModule.HttpRequestOptions): void;
     /**
      * Sets a field.
      *
@@ -1294,7 +1297,7 @@ export declare class TwitterOAuth extends OAuth {
      */
     constructor(consumerKey: string, consumerSecret: string, token: string, tokenSecret: string);
     /** @inheritdoc */
-    prepare(reqOpts: HTTP.HttpRequestOptions): void;
+    prepare(reqOpts: FetchModule.HttpRequestOptions): void;
     /**
      * Gets or sets the value for "oauth_nonce" (custom random crypto key).
      */
