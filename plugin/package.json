@@ -1,16 +1,16 @@
 {
-	"name": "nativescript-toolbox",
-	"description": "A NativeScript module that is a composition of useful classes, tools and helpers.",
-	"version": "3.0.1",
+	"name": "nativescript-toolbox-sw",
+	"description": "Fork of nativescript-toolbox - A NativeScript module that is a composition of useful classes, tools and helpers.",
+	"version": "3.0.2",
 	"nativescript": {
 		"platforms": {
-			"ios": "3.0.0",
-			"android": "3.0.0"
+			"ios": "3.3.1",
+			"android": "3.3.1"
 		}
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/mkloubert/nativescript-toolbox"
+		"url": "https://github.com/whins/nativescript-toolbox"
 	},
 	"keywords": [
 		"NativeScript",
@@ -67,17 +67,17 @@
 		"Lazy"
 	],
 	"author": {
-		"name": "Marcel Joachim Kloubert",
-		"email": "marcel.kloubert@gmx.net"
+		"name": "whins",
+		"email": "whinsler@gmail.com"
 	},
 	"license": {
 		"type": "MIT",
-		"url": "https://github.com/mkloubert/nativescript-toolbox/blob/master/LICENSE"
+		"url": "https://github.com/whins/nativescript-toolbox/blob/master/LICENSE"
 	},
 	"bugs": {
-		"url": "https://github.com/mkloubert/nativescript-toolbox/issues"
+		"url": "https://github.com/whins/nativescript-toolbox/issues"
 	},
-	"homepage": "https://github.com/mkloubert/nativescript-toolbox",
+	"homepage": "https://github.com/whins/nativescript-toolbox",
 	"readmeFilename": "README.md",
 	"dependencies": {},
 	"devDependencies": {
