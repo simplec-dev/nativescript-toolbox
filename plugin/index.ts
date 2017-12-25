@@ -29,7 +29,7 @@ import Connectivity = require('connectivity');
 var CryptoJS = require('./crypto-js');
 var Device = require('./Device');
 import Enumerable = require('./enumerable');
-var Markdown = require('nativescript-toolbox/markdown').markdown;
+var Markdown = require('nativescript-toolbox-sw/markdown').markdown;
 var MD5 = require('./crypto-js/md5');
 import Moment = require('./moment');
 import {ObservableArray} from 'data/observable-array';

@@ -1,7 +1,7 @@
 {
 	"name": "nativescript-toolbox-sw",
 	"description": "Fork of nativescript-toolbox - A NativeScript module that is a composition of useful classes, tools and helpers.",
-	"version": "3.0.2",
+	"version": "3.0.4",
 	"nativescript": {
 		"platforms": {
 			"ios": "3.3.1",
@@ -87,8 +87,6 @@
 	},
 	"peerDependencies": {
 		"tns-core-modules": "^3.0.0 || ^3.0.0-rc.1"
-	},
-	"scripts": {
-		"postinstall": "tsc"
 	}
+	
 }
