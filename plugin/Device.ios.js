@@ -236,7 +236,7 @@ function openUri(uri) {
 exports.openUri = openUri;
 
 function openWifiSettingsOnDevice() {
-    var uris = [ 'App-Prefs:root=WIFI' ];
+    var uris = [ ]; // the old url stuff is no longer supported and will reject apps
     for (var i = 0; i < uris.length; i++) {
         if (openUri(uris[i])) {
             return true;
