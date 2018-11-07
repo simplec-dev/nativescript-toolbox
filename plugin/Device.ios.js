@@ -236,7 +236,7 @@ function openUri(uri) {
 exports.openUri = openUri;
 
 function openWifiSettingsOnDevice() {
-    var uris = [ /*'prefs:root=WIFI', */'App-Prefs:root=WIFI' ];
+    var uris = [ 'App-Prefs:root=WIFI' ];
     for (var i = 0; i < uris.length; i++) {
         if (openUri(uris[i])) {
             return true;

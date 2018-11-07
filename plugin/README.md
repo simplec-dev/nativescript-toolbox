@@ -3,7 +3,7 @@
 
 # NativeScript Toolbox
 
-This fork removes 'prefs:root=' from ios.  That string will cause apps to be rejected.
+This fork removes 'prefs -:- root=' from ios.  That string will cause apps to be rejected.
 
 A [NativeScript](https://nativescript.org/) module that is a composition of useful classes, tools and helpers.
 
