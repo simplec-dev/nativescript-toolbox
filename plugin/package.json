@@ -1,7 +1,7 @@
 {
 	"name": "nativescript-toolbox-ssi",
 	"description": "Fork of nativescript-toolbox - A NativeScript module that is a composition of useful classes, tools and helpers.",
-	"version": "3.0.7",
+	"version": "3.0.8",
 	"nativescript": {
 		"platforms": {
 			"ios": "3.3.1",
@@ -81,12 +81,9 @@
 	"readmeFilename": "README.md",
 	"dependencies": {},
 	"devDependencies": {
-		"tns-core-modules": "^3.0.0 || ^3.0.0-rc.1",
-		"tns-platform-declarations": "^3.0.0 || ^3.0.0-rc.1",
+		"tns-core-modules": "^3.3.0",
+		"tns-platform-declarations": "^3.3.0",
 		"typescript": "^2.2.2"
-	},
-	"peerDependencies": {
-		"tns-core-modules": "^3.0.0 || ^3.0.0-rc.1"
 	}
 	
 }
